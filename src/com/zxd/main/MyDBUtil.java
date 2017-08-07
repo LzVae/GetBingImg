@@ -7,21 +7,21 @@ import java.sql.SQLException;
 public class MyDBUtil {
 
 	public static final String DRIVER_CLASS_NAME = "com.mysql.jdbc.Driver";
-    public static final String URL = "jdbc:mysql://115.159.82.98:3306/jwxt";     
-    public static final String USERNAME = "root";
-    public static final String PASSWORD = "8200506";
+    public static final String URL = "jdbc:mysql://xxx.xxx.xxx.xxx:3306/jwxt";     
+    public static final String USERNAME = "xxx";
+    public static final String PASSWORD = "xxx";
 
-    // ×¢²áÊı¾İ¿âÇı¶¯
+    // æ³¨å†Œæ•°æ®åº“é©±åŠ¨
     static {
     	try {
              Class.forName(DRIVER_CLASS_NAME);
          } catch (ClassNotFoundException e) {
-             System.out.println("×¢²áÊ§°Ü£¡");
+             System.out.println("æ³¨å†Œå¤±è´¥ï¼");
              e.printStackTrace();
          }
      }
  
-     // »ñÈ¡Á¬½Ó
+     // è·å–è¿æ¥
      public static Connection getConn(){
     	 Connection connection =null;
     	 try {
@@ -35,13 +35,13 @@ public class MyDBUtil {
      
      
  
-     // ¹Ø±ÕÁ¬½Ó
+     // å…³é—­è¿æ¥
      public static void closeConn(Connection conn) {
          if (null != conn) {
              try {
                  conn.close();
              } catch (SQLException e) {
-                 System.out.println("¹Ø±ÕÁ¬½ÓÊ§°Ü£¡");
+                 System.out.println("å…³é—­è¿æ¥å¤±è´¥ï¼");
                  e.printStackTrace();
              }
          }
